@@ -1,0 +1,37 @@
+<!-- *3* create index page with angular cdn and angular code imported -->
+<!-- *4* go to /js/config.js -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
+    <title>MEAN belt</title>
+    <!-- import angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- import angular-route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js" charset="utf-8"></script>
+    <!-- import angular code -->
+    <script src="./js/config.js" charset="utf-8"></script>
+    <script src="./js/factories.js" charset="utf-8"></script>
+    <script src="./js/controllers.js" charset="utf-8"></script>
+
+
+  </head>
+    <!-- replace this_app with your app name!!! -->
+  <body ng-app="appointments" class="ng-scope">
+    <div class="container">
+      <header>
+        <h1 class="title">App Name</h1>
+        <div class="header-links">
+          <a href="#/new_appointment">new appointment</a>
+          <a href="#/">dashboard</a>
+        </div>
+      </header>
+      <div class="angular" ng-view="">
+
+      </div>
+    </div>
+  </body>
+</html>

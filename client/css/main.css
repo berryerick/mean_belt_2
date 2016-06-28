@@ -1,0 +1,39 @@
+*{
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+a{
+  color: inherit;
+  /*text-decoration: none;*/
+}
+a:hover{
+  color: lightblue;
+}
+
+body{
+  margin: 0;
+}
+div.container{
+  width: 100vw;
+}
+  header{
+    width: 100%;
+    padding: 0 5%;
+    background-color: #777;
+    color: white;
+  }
+    h1.title{
+      display: inline-block;
+      width: 30%;
+    }
+    div.header-links{
+      width: 60%;
+      display: inline-block;
+    }
+
+  div.angular{
+    width: 90vw;
+    margin: 0 auto;
+    min-height: 300px;
+  }

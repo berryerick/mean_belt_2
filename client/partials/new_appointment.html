@@ -1,0 +1,24 @@
+<div class="controller" ng-controller="appointmentController as AC">
+  <!-- {{AC}} -->
+  <h1>New Appointment</h1>
+  <form class="appointment">
+    <div class="field">
+      <label for="date">Date and time: </label>
+      <input type="date" name="date" value=""  min="{{minDate| date: AC.date" ng-model="AC.appointment.date" required>
+    </div>
+    <div class="field">
+      <label for="time">Time: </label>
+      <input type="time" name="time" value="" ng-model="AC.appointment.time" min="08:00:00" max="17:00:00" required>
+    </div>
+    <div class="field">
+      <label for="complaint">Complaint: </label>
+      <textarea name="complaint" value="" ng-model="AC.appointment.complaint" required></textarea>
+    </div>
+    <button  name="button">Cancel</button>
+    <button ng-click="AC.make_appointment()" name="button">Make apointment</button>
+    <ul>
+      <li ng-repeat="error in AC.errors">{{error}}
+      </li>
+    </ul>
+  </form>
+</div>

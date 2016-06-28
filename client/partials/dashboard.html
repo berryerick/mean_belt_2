@@ -1,0 +1,23 @@
+<div class="controller" ng-controller="dashController as DC">
+  <!-- {{DC}} -->
+  <h1>Doctors Appointments</h1>
+  <h2>Welcome <span ng-bind="DC.currUser.name"></span></h2>
+  <a href="#/"ng-click="DC.logout()">Logout</a>
+
+  <table>
+    <thead>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Patient Name</th>
+      <th>Complaint</th>
+    </thead>
+    <tr ng-repeat="entry in DC.appointments">
+      <td ng-bind="entry.date"></td>
+      <td ng-bind="entry.time"></td>
+      <td ng-bind="entry.patient[0].name"></td>
+      <td ><span ng-bind="entry.complaint"></span> <button ng-show="DC.currUser._id === entry.patient[0]._id" ng-click="DC.delete(entry._id)">Delete</button></td>
+    </tr>
+  </table>
+
+  <!-- <a href="#/users/{{DC.currUser._id}}">your profile</a> -->
+</div>
